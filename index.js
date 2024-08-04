@@ -9,7 +9,8 @@ const postRoutes = require("./routes/postcalls");
 const app = express();
 const port = 5000;
 const cors =require("cors");
-const uri = "mongodb://localhost:27017/HEHOMEEASE";
+const uri ="mongodb://3.25.237.189:27017/HomeEase";
+//const uri = "mongodb://localhost:27017/HEHOMEEASE";
 
 mongoose.connect(uri, {
   useNewUrlParser: true,
