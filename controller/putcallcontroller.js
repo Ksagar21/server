@@ -2,7 +2,7 @@ const Services = require("../models/servicesModel");
 
 exports.updateServices = async (req, res) => {
    
-    const { serviceName, description, price,_id,duration } = req.body;
+    const { serviceName, description, price,_id,duration,image } = req.body;
     try {
       const service = await Services.findById(_id);
       if (!service) {
@@ -13,6 +13,7 @@ exports.updateServices = async (req, res) => {
       service.serviceName = serviceName || service.serviceName;
       service.description = description || service.description;
       service.price = price || service.price;
+       service.image = image || service.image;
       service.duration = duration || service.duration;
 
       await service.save();
